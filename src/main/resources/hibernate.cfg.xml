@@ -21,8 +21,6 @@
    <property name="hibernate.connection.password">
       Keeper2009
    </property>
-
-	<!-- <prop key="hibernate.id.new_generator_mappings">false</prop> -->
 	
 </session-factory>
 </hibernate-configuration>

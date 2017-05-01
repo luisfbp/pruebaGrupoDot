@@ -1,4 +1,4 @@
-package com.grupodot.pruebaingreso.modelo.pojos;
+package com.grupodot.pruebaingreso.modelo;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

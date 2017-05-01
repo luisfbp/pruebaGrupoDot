@@ -1,4 +1,4 @@
-package com.grupodot.pruebaingreso.modelo.pojos;
+package com.grupodot.pruebaingreso.modelo;
 
 import java.util.List; 
 import java.util.Date;
@@ -8,29 +8,33 @@ import org.hibernate.HibernateException;
 import org.hibernate.Session; 
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
+
+import com.grupodot.pruebaingreso.dao.PeliculaDAO;
+import com.grupodot.pruebaingreso.dao.PeliculaDAOImpl;
+
 import org.hibernate.SessionFactory;
 
 public class ManageEmployee {
    private static SessionFactory factory;
    
    public static void main(String[] args) {
-      try{
-         factory = new Configuration().
-                   configure().
-                   //addPackage("com.xyz") //add package if used.
-                   addAnnotatedClass(Pelicula.class).
-                   buildSessionFactory();
-      }catch (Throwable ex) { 
-         System.err.println("Failed to create sessionFactory object." + ex);
-         throw new ExceptionInInitializerError(ex); 
-      }
-      ManageEmployee ME = new ManageEmployee();
-
-      /* Add few employee records in database */
-      Integer peliculaID = ME.addPelicula("Pelicula23", "Esta inserción viene de hibernate");
-      
-      System.out.println("Se inserto la pelicula " + peliculaID);
-      /* List down all the employees */
+//      try{
+//         factory = new Configuration().
+//                   configure().
+//                   //addPackage("com.xyz") //add package if used.
+//                   addAnnotatedClass(Pelicula.class).
+//                   buildSessionFactory();
+//      }catch (Throwable ex) { 
+//         System.err.println("Failed to create sessionFactory object." + ex);
+//         throw new ExceptionInInitializerError(ex); 
+//      }
+//      ManageEmployee ME = new ManageEmployee();
+//
+//      /* Add few employee records in database */
+//      Integer peliculaID = ME.addPelicula("Pelicula23", "Esta inserción viene de hibernate");
+//      
+//      System.out.println("Se inserto la pelicula " + peliculaID);
+//      /* List down all the employees */
 //      ME.listEmployees();
 //
 //      /* Update employee's records */
@@ -41,6 +45,16 @@ public class ManageEmployee {
 //
 //      /* List down new list of the employees */
 //      ME.listEmployees();
+	   
+	   PeliculaDAO persisPelicula = new PeliculaDAOImpl();
+	   
+	   Pelicula pelicula = new Pelicula();
+	   pelicula.setDescripcion("Esto es una pelicula con todas las de la ley");
+	   pelicula.setNombre("Pelicula Bien hecha");
+	   
+	   Integer idPelicula = persisPelicula.addPelicula(pelicula);
+	   
+	   System.out.println("Se inserto la pelicula " + idPelicula);
    }
    
 	public Integer addPelicula(String nombre, String descripcion) {
