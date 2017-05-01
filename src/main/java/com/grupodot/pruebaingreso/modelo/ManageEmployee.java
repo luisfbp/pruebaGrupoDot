@@ -17,7 +17,7 @@ import org.hibernate.SessionFactory;
 public class ManageEmployee {
    private static SessionFactory factory;
    
-   public static void main(String[] args) {
+//   public static void main(String[] args) {
 //      try{
 //         factory = new Configuration().
 //                   configure().
@@ -45,17 +45,17 @@ public class ManageEmployee {
 //
 //      /* List down new list of the employees */
 //      ME.listEmployees();
-	   
-	   PeliculaDAO persisPelicula = new PeliculaDAOImpl();
-	   
-	   Pelicula pelicula = new Pelicula();
-	   pelicula.setDescripcion("Esto es una pelicula con todas las de la ley");
-	   pelicula.setNombre("Pelicula Bien hecha");
-	   
-	   Integer idPelicula = persisPelicula.addPelicula(pelicula);
-	   
-	   System.out.println("Se inserto la pelicula " + idPelicula);
-   }
+//	   
+//	   PeliculaDAO persisPelicula = new PeliculaDAOImpl();
+//	   
+//	   Pelicula pelicula = new Pelicula();
+//	   pelicula.setDescripcion("Esto es una pelicula con todas las de la ley");
+//	   pelicula.setNombre("Pelicula Bien hecha");
+//	   
+//	   Integer idPelicula = persisPelicula.addPelicula(pelicula);
+//	   
+//	   System.out.println("Se inserto la pelicula " + idPelicula);
+//   }
    
 	public Integer addPelicula(String nombre, String descripcion) {
 		Integer peliculaId = null;
