@@ -42,4 +42,8 @@ public class Pelicula {
 		this.descripcion = descripcion;
 	}
 
+	@Override
+	public String toString() {
+		return "Pelicula [codigo=" + codigo + ", nombre=" + nombre + ", descripcion=" + descripcion + "]";
+	}
 }

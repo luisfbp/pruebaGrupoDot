@@ -1,4 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -7,6 +8,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-<p>HELLOW WORLD, <s:property value="nombre"/></p>
+<h1>Se ha ingresado la pelicula exitosamente</h1>
+<p>Se registro la siguiente informacion: <s:property value="pelicula" /> </p>
+ 
+<p><a href="/Grupodot/index.jsp">Regresar a Inicio</a>.</p>
 </body>
 </html>

@@ -9,6 +9,9 @@
 </head>
 <body>
 	<h1>Registro y consulta de peliculas</h1>
+	<a href="/Grupodot/IngresarPelicula.jsp">Ingresar Pelicula</a> <br>
+	<a href="/Grupodot/IngresarImgPelicula.jsp">Ingresar Imagen Pelicula</a>
+	
 	<form action="hello">
 		<label for="name">Please enter your name</label><br /> 
 		<input type="text" name="name" /> 
